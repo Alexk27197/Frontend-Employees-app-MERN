@@ -1,0 +1,31 @@
+.update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.update-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-form button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.update-form button:hover {
+  background-color: #45a049;
+}
+
+.update-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
