@@ -1,7 +1,5 @@
 # Employee MERN App - Frontend 🖥️
 
-![Employee App Screenshot](path_to_your_screenshot.png)
-
 A dynamic and responsive employee management web application with a user-friendly interface that aids in the efficient management of employee records.
 
 ## Live Demo
