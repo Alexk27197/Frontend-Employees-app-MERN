@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./CreateEmployee.css";
+import { BASE_URL } from "../../helper";
 const CreateEmployee = ({ getAllEmployees }) => {
   const [formData, setFormData] = useState({
     company: "",
@@ -18,16 +19,13 @@ const CreateEmployee = ({ getAllEmployees }) => {
     e.preventDefault();
 
     try {
-      const res = await fetch(
-        `http://localhost:${4011 || 4010}/api/employees/create-employee`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const res = await fetch(`${BASE_URL}/api/employees/create-employee`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
       console.log("po neazzar", formData);
       if (res.ok) {
         toast.success("Employee created successfully");

@@ -5,7 +5,7 @@ import UpdateEmployee from "../UpdateEmployee/UpdateEmployee";
 import CreateEmployee from "../CreateEmployee/CreateEmployee";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { BASE_URL } from "../../helper";
 import { Link } from "react-router-dom";
 const DisplayEmployee = () => {
   const [employees, setEmployees] = useState([]);
@@ -18,9 +18,7 @@ const DisplayEmployee = () => {
 
   const getAllEmployees = async () => {
     try {
-      const res = await fetch(
-        `http://localhost:${4011 || 4010}/api/employees/get-employees`
-      );
+      const res = await fetch(`${BASE_URL}/api/employees/get-employees`);
       const data = await res.json();
       setEmployees(data.employees);
       setFilteredEmployees(data.employees);
@@ -43,9 +41,7 @@ const DisplayEmployee = () => {
   const handleDeleteEmployee = async (deleteId) => {
     try {
       const res = await fetch(
-        `http://localhost:${
-          4011 || 4010
-        }/api/employees/delete-employee/${deleteId}`,
+        `${BASE_URL}/api/employees/delete-employee/${deleteId}`,
         {
           method: "DELETE",
         }

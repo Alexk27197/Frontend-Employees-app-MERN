@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./UpdateEmployee.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { BASE_URL } from "../../helper";
 const UpdateEmployee = ({
   employee,
   id,
@@ -24,7 +24,7 @@ const UpdateEmployee = ({
     e.preventDefault();
     try {
       const res = await fetch(
-        `http://localhost:${4011 || 4010}/api/employees/update-employee/${id}`,
+        `${BASE_URL}/api/employees/update-employee/${id}`,
         {
           method: "PUT",
           headers: {
