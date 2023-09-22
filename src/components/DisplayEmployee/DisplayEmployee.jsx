@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./DisplayEmployee.css";
-import { Modal, Button, TextField } from "@material-ui/core";
+import { Modal } from "@material-ui/core";
 import UpdateEmployee from "../UpdateEmployee/UpdateEmployee";
 import CreateEmployee from "../CreateEmployee/CreateEmployee";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FaSearch } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 const DisplayEmployee = () => {
   const [employees, setEmployees] = useState([]);
@@ -72,7 +72,7 @@ const DisplayEmployee = () => {
     setIsOpenCreateModal(true);
   };
 
-  const handleSearchEmployee = () => {
+  const handleSearchEmployee = useCallback(() => {
     if (searchValue === "") {
       setFilteredEmployees(employees);
     } else {
@@ -81,11 +81,11 @@ const DisplayEmployee = () => {
       );
       setFilteredEmployees(filteredEmployees);
     }
-  };
+  }, [searchValue, employees]); // <-- Dependencies of the useCallback
 
   useEffect(() => {
     handleSearchEmployee();
-  }, [searchValue]);
+  }, [searchValue, handleSearchEmployee]);
 
   return (
     <div>
