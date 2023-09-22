@@ -16,7 +16,7 @@ A dynamic and responsive employee management web application with a user-friendl
 
 - **React**: Front-end framework for building user interfaces.
 - **Styled Components**: For styled UI components.
-- (Add any other significant libraries or tools you used.)
+
 
 ## Installation & Setup 🛠️
 
