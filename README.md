@@ -27,7 +27,8 @@ A dynamic and responsive employee management web application with a user-friendl
 
 2. Move into the frontend directory:
     ```bash
-    cd employee-mern-frontend
+    cd BreadcrumbsFrontend-Employees-app-MERN
+
     ```
 
 3. Install dependencies:
