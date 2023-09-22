@@ -24,7 +24,7 @@ const UpdateEmployee = ({
     e.preventDefault();
     try {
       const res = await fetch(
-        `http://localhost:4010/api/employees/update-employee/${id}`,
+        `http://localhost:${4011 || 4010}/api/employees/update-employee/${id}`,
         {
           method: "PUT",
           headers: {

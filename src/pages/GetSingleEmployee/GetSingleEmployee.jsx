@@ -10,7 +10,7 @@ const GetSingleEmployee = () => {
     const fetchEmployee = async () => {
       try {
         const res = await fetch(
-          `http://localhost:4010/api/employees/get-employee/${id}`
+          `http://localhost:${4011 || 4010}/api/employees/get-employee/${id}`
         );
         const data = await res.json();
         setEmployee(data.employee);

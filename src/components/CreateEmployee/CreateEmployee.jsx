@@ -19,7 +19,7 @@ const CreateEmployee = ({ getAllEmployees }) => {
 
     try {
       const res = await fetch(
-        "http://localhost:4010/api/employees/create-employee",
+        `http://localhost:${4011 || 4010}/api/employees/create-employee`,
         {
           method: "POST",
           headers: {

@@ -19,7 +19,7 @@ const DisplayEmployee = () => {
   const getAllEmployees = async () => {
     try {
       const res = await fetch(
-        "http://localhost:4010/api/employees/get-employees"
+        `http://localhost:${4011 || 4010}/api/employees/get-employees`
       );
       const data = await res.json();
       setEmployees(data.employees);
@@ -43,7 +43,9 @@ const DisplayEmployee = () => {
   const handleDeleteEmployee = async (deleteId) => {
     try {
       const res = await fetch(
-        `http://localhost:4010/api/employees/delete-employee/${deleteId}`,
+        `http://localhost:${
+          4011 || 4010
+        }/api/employees/delete-employee/${deleteId}`,
         {
           method: "DELETE",
         }
