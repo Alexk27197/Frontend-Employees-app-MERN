@@ -57,6 +57,8 @@ a {
 }
 .persone-img img {
   border-radius: 10px;
+  width: 128px;
+  height: 128px;
 }
 .modal-container {
   display: flex;
