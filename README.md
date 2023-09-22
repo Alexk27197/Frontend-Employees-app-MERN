@@ -24,7 +24,7 @@ A dynamic and responsive employee management web application with a user-friendl
 
 1. Clone the frontend repository:
     ```bash
-    git clone [https://github.com/alexk27197/employee-mern-frontend.git](https://github.com/Alexk27197/Frontend-Employees-app-MERN.git)
+    git clone https://github.com/alexk27197/employee-mern-frontend.git
     ```
 
 2. Move into the frontend directory:
